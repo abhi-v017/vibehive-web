@@ -137,7 +137,22 @@ export class ProfileService {
             throw new Error(error.response?.data?.message || 'Failed to get my posts');
         }
     }
-
+    async getPostById(id){
+        const options = {
+            method: 'GET',
+            url: `http://localhost:8000/api/v1/posts/get/${id}`,
+            headers: { 
+                accept: 'application/json',
+                Authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        };
+        try {
+            const { data } = await axios.request(options);
+            return data;
+        } catch (error) {
+            throw new Error(error.response?.data?.message || 'Failed to get profile');
+        } 
+    }
     async getProfileByUsername(username) {
         const options = {
             method: 'GET',

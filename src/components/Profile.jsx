@@ -87,7 +87,7 @@ function Profile() {
     if (error) {
         return (
             <Container>
-                <div className="flex justify-center items-center min-h-[60vh]">
+                <div className="flex justify-center items-center min-h-[89.5vh] w-full">
                     <div className="text-red-500 text-center">
                         <p className="text-xl font-semibold mb-2">Error</p>
                         <p>{error}</p>
@@ -100,7 +100,7 @@ function Profile() {
     if (!profile) {
         return (
             <Container>
-                <div className="flex justify-center items-center min-h-[60vh]">
+                <div className="flex justify-center items-center min-h-[89.5vh] w-full">
                     <div className="text-gray-500 text-center">
                         <p className="text-xl font-semibold">No Profile Found</p>
                     </div>
@@ -111,7 +111,7 @@ function Profile() {
 
     return (
         <Container>
-            <div className="max-w-4xl mx-auto p-4 bg-black">
+            <div className="p-4 bg-black min-h-[89.5vh] w-full">
                 {/* Profile Header */}
                 <div className="bg-zinc-900 rounded-lg p-6 mb-6">
                     <div className="flex flex-col md:flex-row items-center md:items-start gap-6">

@@ -61,7 +61,7 @@ function Signup() {
     const signupHandler = async (data) => {
         setError('')
         setLoading(true)
-        
+
         try {
             // Create FormData for file uploads
             const formData = new FormData()
@@ -104,7 +104,7 @@ function Signup() {
     }
 
     return (
-        <div className='bg-zinc-950 text-white p-4 w-full min-h-[88.1vh] flex justify-center items-center'>
+        <div className='bg-zinc-950 text-white p-4 w-full min-h-[89.5vh] flex justify-center items-center'>
             <form onSubmit={handleSubmit(signupHandler)} className='border-2 border-zinc-700 rounded-lg py-6 px-4 shadow-lg shadow-white/20 w-full max-w-2xl'>
                 <h1 className='py-2 px-2 font-bold text-2xl text-center mb-6'>Create Your Account</h1>
                 {error && (
@@ -112,43 +112,17 @@ function Signup() {
                         {error}
                     </div>
                 )}
-                
+
                 {/* Profile Images Section */}
-                <div className='flex flex-col items-center gap-4 mb-6'>
+                <div className='flex items-center justify-center gap-4 mb-6'>
                     <div className='w-full'>
                         <label className='block text-sm font-medium mb-2'>Cover Image</label>
-                        <div className='relative'>
-                            <img
-                                src={coverImagePreview || "https://via.placeholder.com/800x200"}
-                                alt="Cover"
-                                className='w-full h-48 object-cover border-4 border-zinc-700 rounded-lg'
-                            />
-                            <input
-                                type="file"
-                                onChange={handleCoverImageChange}
-                                accept="image/*"
-                                className='absolute inset-0 w-full h-full opacity-0 cursor-pointer'
-                            />
-                        </div>
-                        <p className='text-sm text-zinc-400 mt-1'>Click to upload cover image (max 5MB)</p>
+                        <input type="file" accept='image/*' />
                     </div>
-                    
-                    <div className='relative -mt-16'>
+
+                    <div className='w-full'>
                         <label className='block text-sm font-medium mb-2'>Profile Picture</label>
-                        <div className='relative'>
-                            <img
-                                src={avtarPreview || "https://via.placeholder.com/150"}
-                                alt="Profile"
-                                className='w-32 h-32 rounded-full object-cover border-4 border-zinc-700'
-                            />
-                            <input
-                                type="file"
-                                onChange={handleAvtarChange}
-                                accept="image/*"
-                                className='absolute inset-0 w-full h-full opacity-0 cursor-pointer rounded-full'
-                            />
-                        </div>
-                        <p className='text-sm text-zinc-400 mt-1'>Click to upload profile picture (max 5MB)</p>
+                        <input type='file' accept='image/*'/>
                     </div>
                 </div>
 
@@ -164,11 +138,11 @@ function Signup() {
                                     message: "Invalid email address"
                                 }
                             })}
-                            className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors' 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            placeholder="Enter your email" 
+                            className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors'
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
                         />
                         {errors.email && (
                             <span className='text-red-500 text-sm'>{errors.email.message}</span>
@@ -185,11 +159,11 @@ function Signup() {
                                     message: "Username must be at least 3 characters"
                                 }
                             })}
-                            className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors' 
-                            type="text" 
-                            id="username" 
-                            name="username" 
-                            placeholder="Choose a username" 
+                            className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors'
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Choose a username"
                         />
                         {errors.username && (
                             <span className='text-red-500 text-sm'>{errors.username.message}</span>
@@ -202,11 +176,11 @@ function Signup() {
                             {...register("fullName", {
                                 required: "Full name is required"
                             })}
-                            className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors' 
-                            type="text" 
-                            id="fullName" 
-                            name="fullName" 
-                            placeholder="Enter your full name" 
+                            className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors'
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
                         />
                         {errors.fullName && (
                             <span className='text-red-500 text-sm'>{errors.fullName.message}</span>
@@ -223,11 +197,11 @@ function Signup() {
                                     message: "Password must be at least 6 characters"
                                 }
                             })}
-                            className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors' 
-                            type="password" 
-                            id="password" 
-                            name="password" 
-                            placeholder="Create a password" 
+                            className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors'
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
                         />
                         {errors.password && (
                             <span className='text-red-500 text-sm'>{errors.password.message}</span>
@@ -240,11 +214,11 @@ function Signup() {
                             {...register("location", {
                                 required: "Location is required"
                             })}
-                            className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors' 
-                            type="text" 
-                            id="location" 
-                            name="location" 
-                            placeholder="Enter your location" 
+                            className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors'
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="Enter your location"
                         />
                         {errors.location && (
                             <span className='text-red-500 text-sm'>{errors.location.message}</span>
@@ -257,10 +231,10 @@ function Signup() {
                             {...register("dob", {
                                 required: "Date of birth is required"
                             })}
-                            className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors' 
-                            type="date" 
-                            id="dob" 
-                            name="dob" 
+                            className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors'
+                            type="date"
+                            id="dob"
+                            name="dob"
                         />
                         {errors.dob && (
                             <span className='text-red-500 text-sm'>{errors.dob.message}</span>
@@ -274,18 +248,18 @@ function Signup() {
                         {...register("bio", {
                             required: "Bio is required"
                         })}
-                        className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors min-h-[100px] resize-none' 
-                        id="bio" 
-                        name="bio" 
-                        placeholder="Tell us about yourself" 
+                        className='bg-transparent border-2 border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors min-h-[100px] resize-none'
+                        id="bio"
+                        name="bio"
+                        placeholder="Tell us about yourself"
                     />
                     {errors.bio && (
                         <span className='text-red-500 text-sm'>{errors.bio.message}</span>
                     )}
                 </div>
-                
-                <button 
-                    type='submit' 
+
+                <button
+                    type='submit'
                     className='bg-blue-500 text-white hover:bg-blue-600 border-2 rounded-lg px-4 py-2 font-semibold w-full mt-6 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
                     disabled={loading}
                 >

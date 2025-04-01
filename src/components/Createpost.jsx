@@ -84,7 +84,7 @@ function Createpost() {
     }
 
     return (
-        <div className='bg-zinc-900 h-[88.1vh] flex items-center justify-center text-white'>
+        <div className='bg-zinc-900 h-[89.6vh] flex items-center justify-center text-white'>
             <div className='w-1/2 max-md:w-[80%] border-2 border-zinc-600 rounded-xl bg-zinc-950 p-4 shadow-lg shadow-white/35'>
                 <h1 className='text-center font-bold text-2xl p-2'>Create New Post</h1>
                 {error && (

@@ -99,7 +99,7 @@ function Update() {
     }
 
     return (
-        <div className='bg-zinc-950 text-white p-4 w-full h-[87.5vh] flex justify-center items-center'>
+        <div className='bg-zinc-950 text-white p-4 w-full h-[89.5vh] flex justify-center items-center'>
             <form onSubmit={handleSubmit(handleUpdate)} className='border-2 border-zinc-700 rounded-lg py-3 px-2 shadow-lg shadow-white/20'>
                 <h1 className='py-3 px-2 font-bold text-xl text-center'>Update Your Profile !!!</h1>
                 {error && (

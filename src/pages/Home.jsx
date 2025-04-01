@@ -13,7 +13,7 @@ function Home() {
         })
     }, [])
     return (
-        <div className='min-h-[88.1vh] bg-zinc-950'>
+        <div className='min-h-[89.5vh] bg-zinc-950'>
             <Container>
                 <div className='flex flex-wrap flex-col overflow-y-auto items-center py-2'>
                     {

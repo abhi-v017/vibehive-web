@@ -24,6 +24,7 @@ function post({ title, description, images, tags, postId, isLiked, likes }) {
             console.log(response);
             
             const updatedPost = await profileService.getPostById(postId);
+            console.log(updatedPost)
             setLiked(updatedPost.data.isLiked)
             setCurrentLikes(updatedPost.data.likes);
             
